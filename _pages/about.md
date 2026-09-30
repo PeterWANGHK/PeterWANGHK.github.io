@@ -26,6 +26,7 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 💻 My senior colleagues who work closely with me: [Dr. Zejian Deng](https://scholar.google.com/citations?user=zA_fv-QAAAAJ&hl=zh-CN); [Ms. Yiming Shu](https://github.com/YimingShu-teay); [Ms. Jiahui Xu](https://scholar.google.com/citations?user=MHa9ts4AAAAJ&hl=zh-CN).
 
 # 🔥 News
+- *2026.09*: &nbsp;🎉 [*DREAM*](https://github.com/SAS-HKU/DREAM.git) has been accepted by [Transportation Research Part C](https://www.sciencedirect.com/journal/transportation-research-part-c-emerging-technologies)!
 - *2026.09*: &nbsp;🎤 [HKU-SAIL Lab](https://github.com/SAS-HKU) is organizing the [Workshop on Socially Compliant and Strategic Autonomous Driving](https://sas-hku.github.io/ITSC2026/) at [IEEE International Conference on Intelligent Transportation Systems (ITSC) 2026](https://ieee-itsc.org/2026/) on 15 Sep. Welcome to join us for series of discussions!
 - *2026.05*: &nbsp;📆 I will serve as the Deputy chairperson of student committee of [HKU-ITS](https://institute-of-transport-studies.hku.hk/) from term 2026-2027. Stay tuned for more seminars to come!
 - *2026.05*: &nbsp;🎉 My first manuscript on autonomous driving has been accepted by [IEEE International Conference on Intelligent Transportation Systems (ITSC) 2026](https://ieee-itsc.org/2026/)! Thanks all the guidance from the senior colleagues and my supervisor. See you in Naples, Italy 🇮🇹!
@@ -48,7 +49,7 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 
 (* indicates the corresponding author; † indicates the co-first author)
 ### First-Authored and Co-First-Authored:
-**Zian Wang**, Yiming Shu, Zejian Deng, Guoshun Cai, Jiahui Xu, Jiwei Tang, Dongpu Cao, Chen Sun* [*"DREAM: Defensive Risk-Aware Enhanced Maneuver Planning for Autonomous Vehicles in Heterogeneous Traffic"*](https://ssrn.com/abstract=6500569) (under 2nd round of review)
+**Zian Wang**, Yiming Shu, Zejian Deng, Guoshun Cai, Jiahui Xu, Jiwei Tang, Dongpu Cao, Chen Sun* [*"DREAM: Defensive Risk-Aware Enhanced Maneuver Planning for Autonomous Vehicles in Heterogeneous Traffic"*](https://github.com/SAS-HKU/DREAM.git) (**accepted by [Transportation Research Part C](https://www.sciencedirect.com/journal/transportation-research-part-c-emerging-technologies)**)
 
 **Zian Wang**, Wenjie Huang, Zejian Deng, Jiahui Xu, Yiming Shu, Yong Wong, Shen Li, Dongpu Cao, Chen Sun* [*"SAFE-AD: Socially-aware field-enhanced reinforcement learning for autonomous driving in interactive traffic"*](https://github.com/-HKU/SAFE-AD.git) (under 2nd round of review)
 
