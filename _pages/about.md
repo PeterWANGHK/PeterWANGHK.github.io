@@ -57,7 +57,7 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 
 Tong Zhang†, **Zian Wang†**, Zhining Zhang, Zhuoren Li, Guizhe Jin, Yiming Shu, Chen Sun* [*"MAVCO: Joint Mobility--Active Vision Co-Optimization for Low-Profile Hazard Navigation"*](https://github.com/HelloMAVCO/MAVCO.git) (co-first author, in submission) [Demonstration Video](https://youtu.be/G3eNZXfEx2g?si=74xe_dEG7BnTgEu_)
 
-Mingjian Yu†, **Zian Wang†**, Xiangjie Kong, Chen Sun* *"Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT"* (co-first author, major revision)
+Mingjian Yu†, **Zian Wang†**, Xiangjie Kong, Chen Sun* *"Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT"* (co-first author, under 2nd round review)
 
 ### Co-Authored and Contributed with other colleagues: 
 Waikit Xiu, Qiang Lu, **Zian Wang**, Zhiwei Chen,  Chen Sun, Xiying Li [*"Beyond Scene Priors: Fine-Grained Traffic Scene Reasoning with Benchmarking and Query-Guided Small-Object Focus"*](https://arxiv.org/abs/2607.04149) (under review)
