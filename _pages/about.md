@@ -62,13 +62,9 @@ Mingjian Yu†, **Zian Wang†**, Xiangjie Kong, Chen Sun* *"Generative-Enhanced
 ### Co-Authored and Contributed with other colleagues: 
 Waikit Xiu, Qiang Lu, **Zian Wang**, Zhiwei Chen,  Chen Sun, Xiying Li [*"Beyond Scene Priors: Fine-Grained Traffic Scene Reasoning with Benchmarking and Query-Guided Small-Object Focus"*](https://arxiv.org/abs/2607.04149) (under review)
 
-Yiming Shu, Jiahui Xu, Jiwei Tang, Ruiyang Gao, **Zian Wang**, Chen Sun* [*"LA-RL: Language Action-guided Reinforcement Learning with Safety Guarantees for Autonomous Highway Driving"*](https://arxiv.org/pdf/2512.05686) (major revision)
+Guoshun Cai, Chen Sun, Zejian Deng, Jiahui Xu, **Zian Wang**, Guodong Yin, Chao Huang *"Nash Game MPC With Inexact Equilibrium Computation and Intermittent Information Update"* (under 2nd round review)
 
-Guoshun Cai, Chen Sun, Zejian Deng, Jiahui Xu, **Zian Wang**, Guodong Yin, Chao Huang *"Nash Game MPC With Inexact Equilibrium Computation and Intermittent Information Update"* (major revision)
-
-Shengyi Li, Yiming Shu, Wei Zhang, Jiahui Xu, **Zian Wang**, Chen Sun* *"EAC-Drive: Efficient Action-Centric Vision-Language-Action Planning for End-to-End Autonomous Driving"* (in submission)
-
-Jiahui Xu, Guoshun Cai, Jiaru Zhong, Yong Wang, Yiming Shu, **Zian Wang**, Lap-Pui Chau, Chen Sun* *"GameDiffusion: A Diffusion Models with Adaptive Game-Inspired Guidance"* (major revision)
+Jiahui Xu, Guoshun Cai, Jiaru Zhong, Yong Wang, Yiming Shu, **Zian Wang**, Lap-Pui Chau, Chen Sun* *"GameDiffusion: A Diffusion Models with Adaptive Game-Inspired Guidance"* (under 2nd round review)
 
 
 # 💬 Invited Talks
