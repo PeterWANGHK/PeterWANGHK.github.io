@@ -26,12 +26,12 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 💻 My senior colleagues who work closely with me: [Dr. Zejian Deng](https://scholar.google.com/citations?user=zA_fv-QAAAAJ&hl=zh-CN); [Ms. Yiming Shu](https://github.com/YimingShu-teay); [Ms. Jiahui Xu](https://scholar.google.com/citations?user=MHa9ts4AAAAJ&hl=zh-CN).
 
 # 🔥 News
-- *2026.09*: &nbsp;🎉 [*DREAM*](https://github.com/SAS-HKU/DREAM.git) has been accepted by [Transportation Research Part C](https://www.sciencedirect.com/journal/transportation-research-part-c-emerging-technologies)!
+- *2026.09*: &nbsp;🎉 [**DREAM**](https://github.com/SAS-HKU/DREAM.git) has been accepted by [**Transportation Research Part C**](https://www.sciencedirect.com/journal/transportation-research-part-c-emerging-technologies)!
 - *2026.09*: &nbsp;🎤 [HKU-SAIL Lab](https://github.com/SAS-HKU) is organizing the [Workshop on Socially Compliant and Strategic Autonomous Driving](https://sas-hku.github.io/ITSC2026/) at [IEEE International Conference on Intelligent Transportation Systems (ITSC) 2026](https://ieee-itsc.org/2026/) on 15 Sep. Welcome to join us for series of discussions!
 - *2026.05*: &nbsp;📆 I will serve as the Deputy chairperson of student committee of [HKU-ITS](https://institute-of-transport-studies.hku.hk/) from term 2026-2027. Stay tuned for more seminars to come!
 - *2026.05*: &nbsp;🎉 My first manuscript on autonomous driving has been accepted by [IEEE International Conference on Intelligent Transportation Systems (ITSC) 2026](https://ieee-itsc.org/2026/)! Thanks all the guidance from the senior colleagues and my supervisor. See you in Naples, Italy 🇮🇹!
 - *2026.03*: &nbsp;🎤 I gave my first-ever academic seminar at [HKU-ITS](https://institute-of-transport-studies.hku.hk/). Thanks all colleagues for participation and the invitation from Mr. Qingyang Li.
-- *2025.09*: &nbsp;🎉 I officially started my journey affiliated with [Department of Data and Systems Engineering](https://www.dase.hku.hk/), The University of Hong Kong, as a Master of Philosophy student. Honored to be onboard HKU-SAIL Lab
+- *2025.09*: &nbsp;🎉 I officially started my journey affiliated with [Department of Data and Systems Engineering](https://www.dase.hku.hk/), The University of Hong Kong, as a Master of Philosophy student. Honored to be onboard HKU-SAIL Lab!
 - 
 # 💻 Positions
 - *2026.07 to now*, Deputy Chairperson of Student Committee and Student Fellow, [HKU Institute of Transport Studies](https://institute-of-transport-studies.hku.hk/)
@@ -57,14 +57,14 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 
 Tong Zhang†, **Zian Wang†**, Zhining Zhang, Zhuoren Li, Guizhe Jin, Yiming Shu, Chen Sun* [*"MAVCO: Joint Mobility--Active Vision Co-Optimization for Low-Profile Hazard Navigation"*](https://github.com/HelloMAVCO/MAVCO.git) (co-first author, in submission) [Demonstration Video](https://youtu.be/G3eNZXfEx2g?si=74xe_dEG7BnTgEu_)
 
-Mingjian Yu†, **Zian Wang†**, Xiangjie Kong, Chen Sun* *"Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT"* (co-first author, under 2nd round review)
+Mingjian Yu†, **Zian Wang†**, Xiangjie Kong, Chen Sun* *"Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT"* (co-first author, under 2nd round of review)
 
 ### Co-Authored and Contributed with other colleagues: 
 Waikit Xiu, Qiang Lu, **Zian Wang**, Zhiwei Chen,  Chen Sun, Xiying Li [*"Beyond Scene Priors: Fine-Grained Traffic Scene Reasoning with Benchmarking and Query-Guided Small-Object Focus"*](https://arxiv.org/abs/2607.04149) (under review)
 
-Guoshun Cai, Chen Sun, Zejian Deng, Jiahui Xu, **Zian Wang**, Guodong Yin, Chao Huang *"Nash Game MPC With Inexact Equilibrium Computation and Intermittent Information Update"* (under 2nd round review)
+Guoshun Cai, Chen Sun, Zejian Deng, Jiahui Xu, **Zian Wang**, Guodong Yin, Chao Huang *"Nash Game MPC With Inexact Equilibrium Computation and Intermittent Information Update"* (under 2nd round of review)
 
-Jiahui Xu, Guoshun Cai, Jiaru Zhong, Yong Wang, Yiming Shu, **Zian Wang**, Lap-Pui Chau, Chen Sun* *"GameDiffusion: A Diffusion Models with Adaptive Game-Inspired Guidance"* (under 2nd round review)
+Jiahui Xu, Guoshun Cai, Jiaru Zhong, Yong Wang, Yiming Shu, **Zian Wang**, Lap-Pui Chau, Chen Sun* *"GameDiffusion: A Diffusion Models with Adaptive Game-Inspired Guidance"* (under 2nd round of review)
 
 
 # 💬 Invited Talks
