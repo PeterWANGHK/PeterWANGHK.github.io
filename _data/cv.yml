@@ -1,60 +1,49 @@
-{
-  "cv":
-    {
-      "name": "Zian (Peter) Wang",
-      "label": "MPhil student, Data and Systems Engineering",
-      "email": "peterwang.dase@connect.hku.hk",
-      "location": "Hong Kong",
-      "summary": "Risk-aware autonomous driving, safe motion planning, and intelligent transportation systems.",
-      "social_networks": [{ "network": "GitHub", "username": "PeterWANGHK" }, { "network": "LinkedIn", "username": "zian-wanghk" }],
-      "sections":
-        {
-          "Education":
-            [
-              {
-                "institution": "The University of Hong Kong",
-                "area": "Data and Systems Engineering",
-                "studyType": "Master of Philosophy (MPhil)",
-                "start_date": "2025-09",
-                "end_date": "present",
-                "highlights": ["Supervisor: Prof. Chen Sun"],
-              },
-              {
-                "institution": "The Hong Kong Polytechnic University",
-                "area": "Electronic and Information Engineering",
-                "studyType": "Bachelor of Engineering (Honors)",
-                "start_date": "2021-08",
-                "end_date": "2025-05",
-                "highlights":
-                  [
-                    "Supervisor: Prof. Ivan Ho Wang-Hei",
-                    "Thesis: Advancing Cooperative Autonomous Navigation in Dynamic Environments with DRL-Optimized SLAM Hyperparameters for Enhanced Map Merging",
-                  ],
-              },
-              {
-                "institution": "Nanyang Technological University, Singapore",
-                "studyType": "Summer exchange",
-                "start_date": "2023-06",
-                "end_date": "2023-07",
-              },
-              { "institution": "Technical University of Denmark", "studyType": "Summer exchange", "start_date": "2022-06", "end_date": "2022-08" },
-              { "institution": "Chengdu Shude High School (Foreign Language Campus)", "start_date": 2018, "end_date": 2021 },
-            ],
-          "Experience":
-            [
-              {
-                "company": "HKU Institute of Transport Studies",
-                "position": "Deputy Chairperson of Student Committee and Student Fellow",
-                "start_date": "2026-07",
-                "end_date": "present",
-              },
-              {
-                "company": "HKU Department of Data and Systems Engineering",
-                "position": "Part-time Research and Teaching Assistant",
-                "start_date": "2025-11",
-                "end_date": "present",
-              },
-            ],
-        },
-    },
-}
+cv:
+  name: Zian (Peter) Wang
+  label: MPhil student, Data and Systems Engineering
+  email: peterwang.dase@connect.hku.hk
+  location: Hong Kong
+  summary: Risk-aware autonomous driving, safe motion planning, and intelligent transportation systems.
+  social_networks:
+    - network: GitHub
+      username: PeterWANGHK
+    - network: LinkedIn
+      username: zian-wanghk
+  sections:
+    Education:
+      - institution: The University of Hong Kong
+        area: Data and Systems Engineering
+        studyType: Master of Philosophy (MPhil)
+        start_date: 2025-09
+        end_date: present
+        highlights:
+          - "Supervisor: Prof. Chen Sun"
+      - institution: The Hong Kong Polytechnic University
+        area: Electronic and Information Engineering
+        studyType: Bachelor of Engineering (Honors)
+        start_date: 2021-08
+        end_date: 2025-05
+        highlights:
+          - "Supervisor: Prof. Ivan Ho Wang-Hei"
+          - "Thesis: Advancing Cooperative Autonomous Navigation in Dynamic Environments with DRL-Optimized SLAM Hyperparameters
+            for Enhanced Map Merging"
+      - institution: Nanyang Technological University, Singapore
+        studyType: Summer exchange
+        start_date: 2023-06
+        end_date: 2023-07
+      - institution: Technical University of Denmark
+        studyType: Summer exchange
+        start_date: 2022-06
+        end_date: 2022-08
+      - institution: Chengdu Shude High School (Foreign Language Campus)
+        start_date: 2018
+        end_date: 2021
+    Experience:
+      - company: HKU Institute of Transport Studies
+        position: Deputy Chairperson of Student Committee and Student Fellow
+        start_date: 2026-07
+        end_date: present
+      - company: HKU Department of Data and Systems Engineering
+        position: Part-time Research and Teaching Assistant
+        start_date: 2025-11
+        end_date: present
