@@ -5,7 +5,7 @@ permalink: /
 subtitle: MPhil student · Data and Systems Engineering · The University of Hong Kong
 profile:
   align: right
-  image: profile_hku.png
+  image: profile.jpeg
   image_circular: false
   more_info: >
     <p>103M, Haking Wong Building</p>
@@ -59,6 +59,16 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 An overview of my research hierarchy for the recent year.
 
 {% include figure.liquid path="assets/img/research_timeline.jpg" class="img-fluid rounded" alt="Research hierarchy for 2026" zoomable=true %}
+
+### HKU-SAIL Lab research demo · 2025–2026
+
+<figure>
+  <a class="d-block position-relative" href="https://youtu.be/dx-rVhpalp4" target="_blank" rel="noopener noreferrer" aria-label="Watch the HKU-SAIL Lab Research Demo 2025–2026 on YouTube">
+    <img class="img-fluid rounded w-100" src="https://i.ytimg.com/vi/dx-rVhpalp4/maxresdefault.jpg" alt="HKU-SAIL Lab Research Demo 2025–2026 video preview" width="1280" height="720" loading="lazy">
+    <span class="position-absolute" aria-hidden="true" style="top: 50%; left: 50%; transform: translate(-50%, -50%); background: #c00; color: white; border-radius: 0.75rem; padding: 0.6rem 1.5rem; font-size: 2rem; line-height: 1;">▶</span>
+  </a>
+  <figcaption class="caption">Watch the research demo on YouTube.</figcaption>
+</figure>
 
 ## [Honors and awards]({{ '/awards/' | relative_url }})
 
