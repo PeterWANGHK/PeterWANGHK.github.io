@@ -3,7 +3,13 @@ cv:
   label: MPhil student, Data and Systems Engineering
   email: peterwang.dase@connect.hku.hk
   location: Hong Kong
-  summary: Risk-aware autonomous driving, safe motion planning, and intelligent transportation systems.
+  summary: |
+    Academic and engineering skills supporting research in robotics, risk-aware autonomous driving,
+    safe motion planning, and intelligent transportation systems.<br><br>
+    **Robotics:** SLAM and ROS.<br>
+    **Traffic and autonomous driving:** SUMO, Veins Net, CARLA, and MetaDrive.<br>
+    **Languages:** Cantonese (fluent), English (fluent; IELTS 8.0), and Mandarin (native).<br>
+    **Programming and development:** Python with Anaconda, MATLAB, and C for embedded STM32 and Arduino development.
   social_networks:
     - network: GitHub
       username: PeterWANGHK
@@ -29,12 +35,10 @@ cv:
             for Enhanced Map Merging"
       - institution: Nanyang Technological University, Singapore
         studyType: Summer exchange
-        start_date: 2023-06
-        end_date: 2023-07
+        date: 2023 summer
       - institution: Technical University of Denmark
         studyType: Summer exchange
-        start_date: 2022-06
-        end_date: 2022-08
+        date: 2022 summer
       - institution: Chengdu Shude High School (Foreign Language Campus)
         start_date: 2018
         end_date: 2021
