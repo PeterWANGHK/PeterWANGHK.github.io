@@ -1,109 +1,128 @@
 ---
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-/*
- *    Minimal Mistakes Jekyll Theme
- *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
- *
-*/
+@charset "utf-8";
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
-@import "variables";
-@import "mixins";
-@import "vendor/susy/susy";
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
 
-@import "reset";
-@import "base";
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}}
+);
 
-@import "utilities";
-@import "animations";
-@import "tables";
-@import "buttons";
-@import "notices";
-@import "masthead";
-@import "navigation";
-@import "footer";
-@import "syntax";
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
 
-@import "forms";
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
 
-@import "page";
-@import "archive";
-@import "sidebar";
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
 
-@import "vendor/font-awesome/fontawesome";
-@import "vendor/font-awesome/solid";
-@import "vendor/font-awesome/brands";
-@import "vendor/magnific-popup/magnific-popup";
-@import "print";
-
-.paper-box {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
-    
-
-    .paper-box-image{
-        justify-content: center;
-        display: flex;
-        width: 100%;
-        order: 2;
-        img {
-            max-width: 400px;
-            box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
-        }
-    }
-    
-    .paper-box-text{
-        max-width: 100%;
-        order: 1;
-    }
-    
-    @include breakpoint($medium) {
-        .paper-box-image{
-            justify-content: left;
-            min-width: 200px;
-            max-width: 40%;
-            order: 1;
-        }
-        
-        .paper-box-text{
-            justify-content: left;
-            padding-left: 2em;
-            max-width: 60%;
-            order: 2;
-        }
-
-    }
-
-
+// Site-specific appearance; the base styles above remain owned by al_folio_core.
+:root {
+  --global-theme-color: #176b87;
+  --global-hover-color: #13556b;
 }
-
-$scroll_offset : 2em;
-h1:before, .anchor:before { 
-    content: ''; 
-    display: block; 
-    position: relative; 
-    width: 0; 
-    height: $scroll_offset; 
-    margin-top: -$scroll_offset;
+html[data-theme="dark"] {
+  --global-theme-color: #71c9e5;
+  --global-hover-color: #a8deef;
 }
-
-.badge {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: absolute;
-    margin-top: .5em;
-    margin-left: -.5em;
-    color: white;
-    background-color: #00369f;
-    font-size: .8em;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+.navbar .nav-link {
+  position: relative;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  background: var(--global-theme-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus-visible::after,
+.navbar .active > .nav-link::after {
+  transform: scaleX(1);
+}
+.site-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1.5rem;
+}
+.site-quick-links a {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+.site-quick-links a:hover {
+  border-color: var(--global-theme-color);
+}
+.site-quick-links a:focus-visible,
+.navbar a:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+.publications .preview {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: white;
+}
+.publications ol.bibliography > li {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+.projects .card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.projects .card:hover {
+  transform: translateY(-3px);
+}
+.projects .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: white;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .navbar .nav-link::after,
+  .site-quick-links a,
+  .projects .card {
+    transition: none;
+  }
+  .projects .card:hover {
+    transform: none;
+  }
 }
