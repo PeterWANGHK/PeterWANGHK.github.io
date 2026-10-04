@@ -10,7 +10,7 @@
 
 ## Content transfer
 
-Biography, research timeline, academic profiles, six news items, eight publication records, education, positions, teaching and mentorship, invited talks, presentations, and nine awards were transferred. Publications retain their authorship markers and stated acceptance or review statuses. Selected publications show existing method figures for DREAM, DRIFT, and MAVCO, plus the supplied SAFE-AD graphical abstract. SAFE-AD is listed as under revision at Communications in Transportation Research and links to its public code. The displayed journal impact factors (TR-C 8.4; COMMTR 12.7) were provided by the site owner on 2026-10-04.
+Biography, research timeline, academic profiles, six news items, eight publication records, education, positions, teaching and mentorship, invited talks, presentations, and nine awards were transferred. Publications retain their authorship markers and stated acceptance or review statuses. Seven publication records are currently displayed; one manuscript is withheld during double-blind review. Selected publications show existing method figures for DREAM and DRIFT, plus the supplied SAFE-AD and pipeline diagnosis graphical abstracts. SAFE-AD is listed as under revision at Communications in Transportation Research and links to its public code. The pipeline diagnosis manuscript is under revision at IEEE Transactions on Reliability. BibTeX buttons are enabled only for the two records with public preprints. The displayed journal impact factors (TR-C 8.4; COMMTR 12.7) were provided by the site owner on 2026-10-04.
 
 The original page and configuration are archived under `docs/migration/` for comparison. The old theme's layouts, includes, Sass, fonts, JavaScript, citation crawler, and redundant demo assets were replaced by al-folio's gem-managed runtime. The citation-counter integration is not carried over; the Google Scholar profile remains linked.
 
@@ -48,4 +48,4 @@ JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.proj
 python bin/check_site.py _site_project /peterzianwang.github.io
 ```
 
-The rendered checks verify ten routes, all eight publication records, four previews, status labels, and all generated local links and assets in both configurations. GitHub Actions also provides downloadable built previews for visual inspection. Demo fixture tests under `test/` remain upstream reference material; their Einstein/demo-content expectations are not migration acceptance tests.
+The rendered checks verify ten routes, all seven public publication records, four previews, status labels, and all generated local links and assets in both configurations. GitHub Actions also provides downloadable built previews for visual inspection. Demo fixture tests under `test/` remain upstream reference material; their Einstein/demo-content expectations are not migration acceptance tests.

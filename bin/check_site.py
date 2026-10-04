@@ -14,16 +14,18 @@ for route in expected:
     assert (root / route / "index.html").is_file(), f"Missing route: {route}"
 
 publications = (root / "publications/index.html").read_text(encoding="utf-8")
-keys = ["wang2026dream", "wang2026safead", "wang2026drift", "zhang2026mavco", "yu2026pipeline", "xiu2026scene", "cai2026nash", "xu2026gamediffusion"]
+keys = ["wang2026dream", "wang2026safead", "wang2026drift", "yu2026pipeline", "xiu2026scene", "cai2026nash", "xu2026gamediffusion"]
 for key in keys:
     assert f'id="{key}"' in publications, f"Missing publication: {key}"
-assert publications.count('class="title"') == 8, "Expected exactly eight publication titles"
-for image in ["dream-methodology.jpg", "drift-methodology.png", "mavco-pipeline.png", "safe-ad-graphical-abstract.jpg"]:
+assert publications.count('class="title"') == 7, "Expected exactly seven public publication titles"
+for image in ["dream-methodology.jpg", "drift-methodology.png", "pipeline-graphical-abstract.png", "safe-ad-graphical-abstract.jpg"]:
     assert image in publications, f"Missing publication preview: {image}"
 assert "Under second round of review" in publications
 assert "Co-first author" in publications
 assert "https://github.com/SAS-HKU/SAFE-AD" in publications
 assert "Under revision" in publications
+assert "IEEE Transactions on Reliability" in publications
+assert len(re.findall(r'<a\b[^>]*class="bibtex\s', publications)) == 2, "Only public preprints should expose Bib buttons"
 assert "IF: 8.4" in publications and "IF: 12.7" in publications
 assert 'class="publications publications--collaborative"' in publications
 
@@ -33,6 +35,8 @@ assert "Zian Wang (Peter)" in home
 assert "王梓安" in home and "Wong Tsz On" in home
 assert home.count('class="title"') == 4, "Expected four selected publications"
 assert 'id="wang2026safead"' in home
+assert 'id="yu2026pipeline"' in home
+assert len(re.findall(r'<a\b[^>]*class="bibtex\s', home)) == 1, "Only DRIFT should expose a homepage Bib button"
 assert home.index('id="wang2026safead"') < home.index("Research hierarchy") < home.index("Honors and awards")
 for award in ["Talent Development Scholarship", "Dean's Honours List", "Best Presentation Award", "University Pitch Competition", "Best GBA Solution Award", "Reaching Out Award", "Undergraduate Research and Innovation Scholarship", "Microcontroller Application Design Contest", "Student Innovation and Entrepreneurship Scholarship"]:
     assert award in home, f"Missing homepage award: {award}"
@@ -56,6 +60,11 @@ class Links(HTMLParser):
         if "srcset" in attrs:
             self.links.extend(item.strip().split()[0] for item in attrs["srcset"].split(",") if item.strip())
 
+
+for artifact in root.rglob("*"):
+    assert "mavco" not in artifact.name.lower(), f"Withheld asset was published: {artifact}"
+    if artifact.suffix in [".html", ".json", ".xml"] and artifact.is_file():
+        assert "mavco" not in artifact.read_text(encoding="utf-8").lower(), f"Withheld work leaked into {artifact}"
 
 errors = []
 for page in root.rglob("*.html"):
@@ -89,4 +98,4 @@ for page in root.rglob("*.html"):
                 errors.append(f"{page.relative_to(root)}: unresolved anchor {link}")
 
 assert not errors, "\n".join(errors)
-print(f"Verified {len(expected)} routes, eight publications, four previews, and local links at baseurl {baseurl!r}.")
+print(f"Verified {len(expected)} routes, seven publications, four previews, and local links at baseurl {baseurl!r}.")

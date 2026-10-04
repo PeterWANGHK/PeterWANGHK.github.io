@@ -3,5 +3,5 @@ repo_description_lines_max: 3
 github_repos:
   - SAS-HKU/DREAM
   - SAS-HKU/DRIFT
-  - HelloMAVCO/MAVCO
+  - SAS-HKU/SAFE-AD
   - PeterWANGHK/Benchmark-RiskField

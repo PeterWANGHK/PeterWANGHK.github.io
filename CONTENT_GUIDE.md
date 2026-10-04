@@ -4,9 +4,9 @@
 
 Edit `_bibliography/papers.bib`. Use the author's family name first, separated by `and`; keep publication status explicit. Use `category={lead}` for first-authored or co-first-authored work, or `category={collaborative}` for other collaborations.
 
-Place approved artwork in `assets/img/publication_preview/`, then add `preview={filename.png}` to the matching entry. Images are optional. Clicking an image opens al-folio's zoom view. Current DREAM, DRIFT, and MAVCO previews use existing method figures; source URLs are documented in `docs/migration/figure-sources.md`.
+Place approved artwork in `assets/img/publication_preview/`, then add `preview={filename.png}` to the matching entry. Images are optional. Clicking an image opens al-folio's zoom view. DREAM and DRIFT use existing method figures. SAFE-AD and the pipeline diagnosis paper use supplied graphical abstracts. Sources are documented in `docs/migration/figure-sources.md`.
 
-Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `website`, `slides`, and `poster`. Add only verified information and available files. `selected={true}` places the paper on the homepage. `bibtex_show={true}` enables the BibTeX button. Put status text in `note`; al-folio displays it below the venue.
+Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `website`, `slides`, and `poster`. Add only verified information and available files. `selected={true}` places the paper on the homepage. `bibtex_show={true}` enables the BibTeX button; use it only for work with a publicly available preprint. Omit this field for work without a preprint. Put status text in `note`; al-folio displays it below the venue.
 
 ```bibtex
 @misc{your_unique_key,
@@ -14,12 +14,13 @@ Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `we
   author = {Wang, Zian and Collaborator, Given Name},
   category = {lead},
   note = {Under review},
-  preview = {your_graphical_abstract.png},
-  bibtex_show = {true}
+  preview = {your_graphical_abstract.png}
 }
 ```
 
 Omit `year` for undated manuscripts. Add the publication year, DOI, venue, and bibliographic details once confirmed. The bibliography can search by title, author, and status. Do not put an unpublished result in an accepted venue.
+
+Work undergoing double-blind review should stay outside the published bibliography, projects, repository lists, and assets until disclosure is appropriate.
 
 ## News
 
