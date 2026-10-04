@@ -12,4 +12,4 @@ related_publications: true
 
 Defensive risk-aware maneuver planning in heterogeneous traffic.
 
-[Explore the code](https://github.com/SAS-HKU/DREAM) · [Publication record]({{ '/publications/#wang2026dream' | relative_url }})
+[Explore the code](https://github.com/SAS-HKU/DREAM) · [Publication record]({{ '/publications/#DREAM' | relative_url }})

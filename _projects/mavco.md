@@ -12,6 +12,6 @@ related_publications: true
 
 Joint mobility and active vision for low-profile hazard navigation.
 
-[Explore the code](https://github.com/HelloMAVCO/MAVCO) · [Publication record]({{ '/publications/#zhang2026mavco' | relative_url }})
+[Explore the code](https://github.com/HelloMAVCO/MAVCO) · [Publication record]({{ '/publications/#MAVCO' | relative_url }})
 
 [Watch the demonstration](https://youtu.be/G3eNZXfEx2g)

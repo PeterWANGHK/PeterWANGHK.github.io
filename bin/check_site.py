@@ -65,8 +65,12 @@ for page in root.rglob("*.html"):
             continue
         if parsed.fragment and target.suffix == ".html":
             destination = Links()
-            destination.feed(target.read_text(encoding="utf-8"))
-            if unquote(parsed.fragment) not in destination.ids:
+            destination_html = target.read_text(encoding="utf-8")
+            destination.feed(destination_html)
+            fragment = unquote(parsed.fragment)
+            # al-folio's publication page treats the URL hash as a search term.
+            is_bib_search = "bibsearch" in destination.ids and fragment.lower() in destination_html.lower()
+            if fragment not in destination.ids and not is_bib_search:
                 errors.append(f"{page.relative_to(root)}: unresolved anchor {link}")
 
 assert not errors, "\n".join(errors)

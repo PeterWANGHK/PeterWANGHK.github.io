@@ -31,7 +31,7 @@ Only `assets/css/main.scss` shadows a core runtime asset. It retains the exact p
 
 GitHub's account homepage convention is a repository named `PeterWANGHK.github.io`, published at `https://peterwanghk.github.io/`. This removes the repeated repository path. The account homepage repository did not exist when checked on 2026-10-04. See [GitHub Pages site types](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
 
-The migration includes `_config.root.yml` with an empty baseurl and builds both URL variants in CI. For the clean homepage, create a separate account homepage repository using this prepared source, change `_config.yml` to `baseurl: ""`, and make the workflow's primary build and route check use the empty baseurl. Set its Pages source to GitHub Actions. Keep the old project site available until the new homepage is verified; then replace it with a redirect to preserve old incoming links.
+The migration includes `_config.root.yml` with an empty baseurl and builds both URL variants in CI. For the clean homepage, create a separate account homepage repository using this prepared source and change `_config.yml` to `baseurl: ""`. The workflow automatically validates the configured baseurl. Set its Pages source to GitHub Actions. Keep the old project site available until the new homepage is verified; then replace it with a redirect to preserve old incoming links.
 
 For deployment at the current project address, set the existing repository's Pages source to GitHub Actions before merging the migration. Otherwise GitHub's legacy builder cannot load the al-folio gem plugins.
 

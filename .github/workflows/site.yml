@@ -2,7 +2,7 @@ name: Build and deploy academic site
 
 on:
   push:
-    branches: [main, codex/al-folio-migration]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -48,7 +48,8 @@ jobs:
           JEKYLL_ENV: production
         run: |
           bundle exec jekyll build
-          python bin/check_site.py _site /peterzianwang.github.io
+          baseurl=$(ruby -r yaml -e "puts YAML.load_file('_config.yml')['baseurl'].to_s")
+          python bin/check_site.py _site "$baseurl"
       - name: Upload reviewable build
         uses: actions/upload-artifact@v4
         with:

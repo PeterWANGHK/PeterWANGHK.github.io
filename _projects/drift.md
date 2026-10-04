@@ -12,4 +12,4 @@ related_publications: true
 
 Driving risk inference via field transmission.
 
-[Explore the code](https://github.com/SAS-HKU/DRIFT) · [Publication record]({{ '/publications/#wang2026drift' | relative_url }})
+[Explore the code](https://github.com/SAS-HKU/DRIFT) · [Publication record]({{ '/publications/#DRIFT' | relative_url }})
