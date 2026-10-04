@@ -3,11 +3,11 @@
 # -----------------------------------------------------------------------------
 
 title: blank
-first_name: Zian (Peter)
+first_name: Zian
 middle_name:
-last_name: Wang
+last_name: Wang (Peter)
 contact_note: Email is the best way to reach me.
-description: Zian (Peter) Wang — MPhil student at The University of Hong Kong, researching risk-aware autonomous driving and intelligent transportation systems.
+description: Zian Wang (Peter) — MPhil student at The University of Hong Kong, researching risk-aware autonomous driving and intelligent transportation systems.
 footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted on GitHub Pages.
 keywords: autonomous driving, risk fields, motion planning, robotics, intelligent transportation
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)

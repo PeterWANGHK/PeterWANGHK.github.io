@@ -9,14 +9,14 @@
 
 ## Content transfer
 
-Biography, research timeline, academic profiles, six news items, eight publication records, education, positions, teaching and mentorship, invited talks, presentations, and nine awards were transferred. Publications retain their authorship markers and stated acceptance or review statuses. Selected publications show existing method figures for DREAM, DRIFT, and MAVCO.
+Biography, research timeline, academic profiles, six news items, eight publication records, education, positions, teaching and mentorship, invited talks, presentations, and nine awards were transferred. Publications retain their authorship markers and stated acceptance or review statuses. Selected publications show existing method figures for DREAM, DRIFT, and MAVCO, plus the supplied SAFE-AD graphical abstract. SAFE-AD is listed as under revision at Communications in Transportation Research and links to its public code. The displayed journal impact factors (TR-C 8.4; COMMTR 12.7) were provided by the site owner on 2026-10-04.
 
 The original page and configuration are archived under `docs/migration/` for comparison. The old theme's layouts, includes, Sass, fonts, JavaScript, citation crawler, and redundant demo assets were replaced by al-folio's gem-managed runtime. The citation-counter integration is not carried over; the Google Scholar profile remains linked.
 
 ## Source issues retained for review
 
 - The original HKU-SAIL URL, `https://hku-.hku.hk/`, appears malformed. The biography now links to the group's existing `https://github.com/SAS-HKU` organization.
-- The original SAFE-AD repository URL returned 404 during migration. Its publication record remains visible, while its public Code button is omitted. The original URL is retained in the archived source. Restore it when a public repository is available.
+- The original SAFE-AD repository URL returned 404. It has been replaced with the verified public repository `https://github.com/SAS-HKU/SAFE-AD`; the original URL remains in the archived source.
 - The original teaching repository links are preserved. They may require access or later correction.
 - Month-only news dates use day 01 to provide a stable sort. Site-owned page content displays only the source month and year, so no exact announcement day is claimed.
 - The original DRIFT September presentation is still described as scheduled, because the source did not confirm its completion. Update that status when appropriate.
@@ -49,4 +49,4 @@ JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.root
 python bin/check_site.py _site_root ""
 ```
 
-The rendered checks verify ten routes, all eight publication records, three previews, status labels, and all generated local links and assets in both configurations. GitHub Actions also provides downloadable built previews for visual inspection. Demo fixture tests under `test/` remain upstream reference material; their Einstein/demo-content expectations are not migration acceptance tests.
+The rendered checks verify ten routes, all eight publication records, four previews, status labels, and all generated local links and assets in both configurations. GitHub Actions also provides downloadable built previews for visual inspection. Demo fixture tests under `test/` remain upstream reference material; their Einstein/demo-content expectations are not migration acceptance tests.

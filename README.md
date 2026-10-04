@@ -1,4 +1,4 @@
-# Zian (Peter) Wang's academic website
+# Zian Wang (Peter)'s academic website
 
 An al-folio v1 site migrated from the original academic homepage. The site uses versioned al-folio gems, Markdown content, and BibTeX publication records.
 

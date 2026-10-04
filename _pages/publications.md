@@ -19,6 +19,6 @@ _An asterisk (\*) indicates the corresponding author; a dagger (†) indicates a
 
 ## Collaborative work
 
-<div class="publications">
+<div class="publications publications--collaborative">
 {% bibliography --query @*[category=collaborative] %}
 </div>

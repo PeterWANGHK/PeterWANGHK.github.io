@@ -17,10 +17,23 @@ keys = ["wang2026dream", "wang2026safead", "wang2026drift", "zhang2026mavco", "y
 for key in keys:
     assert f'id="{key}"' in publications, f"Missing publication: {key}"
 assert publications.count('class="title"') == 8, "Expected exactly eight publication titles"
-for image in ["dream-methodology.jpg", "drift-methodology.png", "mavco-pipeline.png"]:
+for image in ["dream-methodology.jpg", "drift-methodology.png", "mavco-pipeline.png", "safe-ad-graphical-abstract.jpg"]:
     assert image in publications, f"Missing publication preview: {image}"
 assert "Under second round of review" in publications
 assert "Co-first author" in publications
+assert "https://github.com/SAS-HKU/SAFE-AD" in publications
+assert "Under revision" in publications
+assert "IF: 8.4" in publications and "IF: 12.7" in publications
+assert 'class="publications publications--collaborative"' in publications
+
+home = (root / "index.html").read_text(encoding="utf-8")
+assert "Zian Wang (Peter)" in home
+assert "王梓安" in home and "Wong Tsz On" in home
+assert home.count('class="title"') == 4, "Expected four selected publications"
+assert 'id="wang2026safead"' in home
+assert home.index('id="wang2026safead"') < home.index("Research hierarchy") < home.index("Honors and awards")
+for award in ["Talent Development Scholarship", "Dean's Honours List", "Best Presentation Award", "University Pitch Competition", "Best GBA Solution Award", "Reaching Out Award", "Undergraduate Research and Innovation Scholarship", "Microcontroller Application Design Contest", "Student Innovation and Entrepreneurship Scholarship"]:
+    assert award in home, f"Missing homepage award: {award}"
 assert "Albert Einstein" not in (root / "cv/index.html").read_text(encoding="utf-8")
 
 
@@ -74,4 +87,4 @@ for page in root.rglob("*.html"):
                 errors.append(f"{page.relative_to(root)}: unresolved anchor {link}")
 
 assert not errors, "\n".join(errors)
-print(f"Verified {len(expected)} routes, eight publications, three previews, and local links at baseurl {baseurl!r}.")
+print(f"Verified {len(expected)} routes, eight publications, four previews, and local links at baseurl {baseurl!r}.")

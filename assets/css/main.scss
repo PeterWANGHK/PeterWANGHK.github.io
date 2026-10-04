@@ -99,6 +99,14 @@ html {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--global-divider-color);
 }
+.publications--collaborative .abbr {
+  display: none;
+}
+.publications--collaborative .col-sm-8 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
 .projects .card {
   transition:
     transform 0.2s ease,
