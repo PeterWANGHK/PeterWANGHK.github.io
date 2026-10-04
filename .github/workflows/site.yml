@@ -43,7 +43,7 @@ jobs:
         run: |
           bundle exec al-folio upgrade audit --no-fail
           bundle exec al-folio upgrade overrides audit
-      - name: Build project site and check routes
+      - name: Build root homepage and check routes
         env:
           JEKYLL_ENV: production
         run: |
@@ -55,17 +55,17 @@ jobs:
         with:
           name: academic-site-preview
           path: _site
-      - name: Check root homepage configuration
+      - name: Check project URL compatibility
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --config _config.yml,_config.root.yml --destination _site_root
-          python bin/check_site.py _site_root ""
-      - name: Upload root homepage preview
+          bundle exec jekyll build --config _config.yml,_config.project.yml --destination _site_project
+          python bin/check_site.py _site_project /peterzianwang.github.io
+      - name: Upload project URL preview
         uses: actions/upload-artifact@v4
         with:
-          name: root-homepage-preview
-          path: _site_root
+          name: project-site-preview
+          path: _site_project
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3

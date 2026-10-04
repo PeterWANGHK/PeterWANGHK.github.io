@@ -1,5 +1,6 @@
 """Check rendered routes, publication migration, and local asset/link resolution."""
 
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -27,6 +28,7 @@ assert "IF: 8.4" in publications and "IF: 12.7" in publications
 assert 'class="publications publications--collaborative"' in publications
 
 home = (root / "index.html").read_text(encoding="utf-8")
+home = unescape(home).replace("’", "'")
 assert "Zian Wang (Peter)" in home
 assert "王梓安" in home and "Wong Tsz On" in home
 assert home.count('class="title"') == 4, "Expected four selected publications"

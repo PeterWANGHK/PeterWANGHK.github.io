@@ -5,7 +5,8 @@
 - Original: `PeterWANGHK/peterzianwang.github.io`, commit `0cf2d52d4fa91fc5e5f3032186442f06fdeeefe1`.
 - Starter: `alshedivat/al-folio`, commit `40c06007dab344970b681ba63b2241b1a8209ec1`.
 - Runtime: `al_folio_core` 1.0.15 and the starter's pinned plugin set.
-- Migration work is on a separate branch. The original default branch remains available during review.
+- Destination: `PeterWANGHK/PeterWANGHK.github.io`, published from `main` using GitHub Pages Actions.
+- The original project repository and site remain available; migration review is preserved in its separate branch and draft pull request.
 
 ## Content transfer
 
@@ -29,11 +30,9 @@ Only `assets/css/main.scss` shadows a core runtime asset. It retains the exact p
 
 ## Clean URL
 
-GitHub's account homepage convention is a repository named `PeterWANGHK.github.io`, published at `https://peterwanghk.github.io/`. This removes the repeated repository path. The account homepage repository did not exist when checked on 2026-10-04. See [GitHub Pages site types](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
+GitHub's account homepage convention is a repository named `PeterWANGHK.github.io`, published at `https://peterwanghk.github.io/`. This removes the repeated repository path. The account homepage repository was created on 2026-10-04 with the site owner's authorization. See [GitHub Pages site types](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
 
-The migration includes `_config.root.yml` with an empty baseurl and builds both URL variants in CI. For the clean homepage, create a separate account homepage repository using this prepared source and change `_config.yml` to `baseurl: ""`. The workflow automatically validates the configured baseurl. Set its Pages source to GitHub Actions. Keep the old project site available until the new homepage is verified; then replace it with a redirect to preserve old incoming links.
-
-For deployment at the current project address, set the existing repository's Pages source to GitHub Actions before merging the migration. Otherwise GitHub's legacy builder cannot load the al-folio gem plugins.
+The production `_config.yml` has an empty baseurl. GitHub Pages uses GitHub Actions. `_config.project.yml` retains the original project path as a compatibility build checked by CI. The original project site remains available so existing incoming links continue to work.
 
 ## Validation
 
@@ -44,9 +43,9 @@ npm run lint:style-contract
 bundle exec al-folio upgrade audit --no-fail
 bundle exec al-folio upgrade overrides audit
 JEKYLL_ENV=production bundle exec jekyll build
-python bin/check_site.py _site /peterzianwang.github.io
-JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.root.yml --destination _site_root
-python bin/check_site.py _site_root ""
+python bin/check_site.py _site ""
+JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config.project.yml --destination _site_project
+python bin/check_site.py _site_project /peterzianwang.github.io
 ```
 
 The rendered checks verify ten routes, all eight publication records, four previews, status labels, and all generated local links and assets in both configurations. GitHub Actions also provides downloadable built previews for visual inspection. Demo fixture tests under `test/` remain upstream reference material; their Einstein/demo-content expectations are not migration acceptance tests.
