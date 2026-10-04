@@ -6,7 +6,7 @@ Edit `_bibliography/papers.bib`. Use the author's family name first, separated b
 
 Place approved artwork in `assets/img/publication_preview/`, then add `preview={filename.png}` to the matching entry. Images are optional. Clicking an image opens al-folio's zoom view. Current DREAM, DRIFT, and MAVCO previews use existing method figures; source URLs are documented in `docs/migration/figure-sources.md`.
 
-Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `website`, `slides`, and `poster`. Add only verified information and available files. `selected={true}` places the paper on the homepage. `bibtex_show={true}` enables the BibTeX button. Put status text in `note` and `additional_info`.
+Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `website`, `slides`, and `poster`. Add only verified information and available files. `selected={true}` places the paper on the homepage. `bibtex_show={true}` enables the BibTeX button. Put status text in `note`; al-folio displays it below the venue.
 
 ```bibtex
 @misc{your_unique_key,
@@ -14,7 +14,6 @@ Supported fields include `abstract`, `doi`, `arxiv`, `code`, `pdf`, `video`, `we
   author = {Wang, Zian and Collaborator, Given Name},
   category = {lead},
   note = {Under review},
-  additional_info = { · Under review},
   preview = {your_graphical_abstract.png},
   bibtex_show = {true}
 }

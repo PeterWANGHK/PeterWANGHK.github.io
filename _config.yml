@@ -363,7 +363,7 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
+  group_by: none
   group_order: descending
 
 # Display different badges withs stats for your publications
@@ -386,6 +386,7 @@ filtered_bibtex_keywords:
     award,
     award_name,
     bibtex_show,
+    category,
     blog,
     code,
     dimensions,
