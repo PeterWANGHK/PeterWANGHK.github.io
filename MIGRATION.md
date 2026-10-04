@@ -18,7 +18,7 @@ The original page and configuration are archived under `docs/migration/` for com
 - The original HKU-SAIL URL, `https://hku-.hku.hk/`, appears malformed. The biography now links to the group's existing `https://github.com/SAS-HKU` organization.
 - The original SAFE-AD repository URL returned 404 during migration. Its publication record remains visible, while its public Code button is omitted. The original URL is retained in the archived source. Restore it when a public repository is available.
 - The original teaching repository links are preserved. They may require access or later correction.
-- Month-only news dates use day 01 to provide a stable sort. No exact announcement day is claimed.
+- Month-only news dates use day 01 to provide a stable sort. Site-owned page content displays only the source month and year, so no exact announcement day is claimed.
 - The original DRIFT September presentation is still described as scheduled, because the source did not confirm its completion. Update that status when appropriate.
 - Undated manuscripts have no invented publication year, DOI, abstract, or venue.
 - Current previews are method figures, not newly designed or publisher-approved graphical abstracts. Add approved replacement artwork via each record's `preview` field.

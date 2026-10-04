@@ -23,7 +23,7 @@ Omit `year` for undated manuscripts. Add the publication year, DOI, venue, and b
 
 ## News
 
-Add a Markdown file under `_news/` with `layout: post`, an actual `date`, and `inline: true` in front matter. The homepage shows the five most recent items; the news page shows all. Migrated month-only announcements use the first day of their source month as a sorting value.
+Add a Markdown file under `_news/` with `layout: post`, an actual `date`, and `inline: true` in front matter. The homepage shows the five most recent items; the news page shows all. Migrated month-only announcements use the first day of their source month as a sorting value; the homepage and news page display month and year.
 
 ## Projects
 

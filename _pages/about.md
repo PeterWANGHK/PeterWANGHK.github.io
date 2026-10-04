@@ -14,7 +14,7 @@ profile:
 selected_papers: true
 social: true
 announcements:
-  enabled: true
+  enabled: false
   scrollable: true
   limit: 5
 latest_posts:
@@ -37,3 +37,17 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 💬 My research philosophy is: pursuing 100% open-source research outputs with reproducibility, credibility, and transparency; looking for real world deployment with sim-to-real.
 
 💻 My senior colleagues who work closely with me: [Dr. Zejian Deng](https://scholar.google.com/citations?user=zA_fv-QAAAAJ&hl=zh-CN); [Ms. Yiming Shu](https://github.com/YimingShu-teay); [Ms. Jiahui Xu](https://scholar.google.com/citations?user=MHa9ts4AAAAJ&hl=zh-CN).
+
+## [News]({{ '/news/' | relative_url }})
+
+<div class="news table-responsive">
+  <table class="table table-sm table-borderless">
+    {% assign updates = site.news | reverse %}
+    {% for update in updates limit:5 %}
+    <tr>
+      <th scope="row" style="width: 20%">{{ update.date | date: '%b %Y' }}</th>
+      <td>{{ update.content | remove: '<p>' | remove: '</p>' | emojify }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
