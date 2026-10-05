@@ -9,7 +9,7 @@ import sys
 
 root = Path(sys.argv[1]).resolve()
 baseurl = sys.argv[2].rstrip("/")
-expected = ["", "publications", "projects", "cv", "news", "teaching", "talks", "awards", "repositories", "contact"]
+expected = ["", "publications", "projects", "cv", "album", "news", "teaching", "talks", "awards", "repositories", "contact"]
 for route in expected:
     assert (root / route / "index.html").is_file(), f"Missing route: {route}"
 

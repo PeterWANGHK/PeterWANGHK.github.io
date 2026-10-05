@@ -36,9 +36,27 @@ Education and positions live in `_data/cv.yml`; the CV page uses the native al-f
 
 ## Navigation and future sections
 
-Create a page in `_pages/`, with a unique `permalink`, `title`, `nav: true`, and `nav_order` to put it on the main bar. For a submenu, add its title and permalink to the `children` list in `_pages/more.md`. Current top-level pages are About, Publications, Projects, CV, and More.
+Create a page in `_pages/`, with a unique `permalink`, `title`, `nav: true`, and `nav_order` to put it on the main bar. For a submenu, add its title and permalink to the `children` list in `_pages/more.md`. Current top-level pages are About, Publications, Projects, CV, Album, and More.
 
 Search, dark mode, image zoom, reading progress, and back-to-top are controlled by `_config.yml`. To start a blog, add real posts to `_posts/` and a blog page using the upstream guide in `docs/CUSTOMIZE.md`. The demo blog and external feeds were removed during migration.
+
+## Album: uploading photos through GitHub
+
+The album at `/album/` discovers photos from folders under `assets/album/`. The folder name is the category, and each photo's filename becomes its caption. There is no photo list or Markdown to update for individual uploads.
+
+1. Open [the album folders on GitHub](https://github.com/PeterWANGHK/PeterWANGHK.github.io/tree/main/assets/album).
+2. Open the appropriate folder: `2022`, `2023`, `2024`, `2025`, `2026`, or `undated`.
+3. Select **Add file → Upload files**, then drag your photos into the page.
+4. Enter a commit message, such as `Add 2026 conference photos`, and commit to **main**.
+5. Wait for **Build and deploy academic site** in the repository's **Actions** tab to finish. Refresh the album; the new images will appear automatically.
+
+Use JPG, JPEG, PNG, WebP, or GIF. Convert HEIC photos to JPEG before uploading. Use descriptive filenames such as `paris-arc-de-triomphe.jpg`; this displays as “Paris arc de triomphe.” Photos sort alphabetically by filename within each category, so prefixes such as `01-`, `02-` control their order. Names and extensions are case-sensitive in published URLs; lower-case filenames are simplest. Images retain their full frame, and visitors can click them to zoom.
+
+Resize large photos to roughly 1600–2400 pixels on the long edge and aim for under 2 MB each for faster loading. GitHub's browser upload limit is 25 MiB per file; see [GitHub's upload instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
+
+To add a new year or separate category, select **Add file → Create new file** in the repository and name it `assets/album/2027/.gitkeep` (or `assets/album/2026-travel/.gitkeep`). Commit it, then upload photos inside that new folder. Categories with photos appear automatically, with hyphens and underscores displayed as spaces. To show an empty category before uploading, add its folder name to `periods` in `_pages/album.md`. Keep photos inside a category folder, rather than directly under `assets/album/`.
+
+The supplied Paris profile photo starts in `undated` because its date was not provided. You can move it into the correct year later by editing its path on GitHub.
 
 ## Appearance
 
