@@ -5,7 +5,6 @@ permalink: /album/
 description: Moments from different years, on campus and beyond.
 nav: true
 nav_order: 4
-periods: ["2026", "2025", "2024", "2023", "2022"]
 ---
 
 {% assign album_files = site.static_files | where_exp: "file", "file.path contains '/assets/album/'" | sort: "path" %}
@@ -20,8 +19,15 @@ periods: ["2026", "2025", "2024", "2023", "2022"]
 {% assign discovered_periods = discovered_periods | push: path_parts[3] %}
 {% endif %}
 {% endfor %}
-{% assign periods = page.periods | concat: discovered_periods | uniq | sort | reverse | where_exp: "period", "period != 'undated'" %}
+{% assign periods = discovered_periods | uniq | sort | reverse | where_exp: "period", "period != 'undated'" %}
+{% if discovered_periods contains "undated" %}
 {% assign periods = periods | push: "undated" %}
+{% endif %}
+
+{% if album_images.size == 0 %}
+
+  <p>Photos to come.</p>
+{% endif %}
 
 <nav aria-label="Album periods" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem;">
   {% for period in periods %}
@@ -40,7 +46,7 @@ periods: ["2026", "2025", "2024", "2023", "2022"]
   <section id="album-{{ period | slugify }}" aria-label="{{ label | escape }} photos" style="scroll-margin-top: 6rem; margin-bottom: 2rem;">
     <h2>{{ label | escape }} <small style="font-size: 0.55em; color: var(--global-text-color-light);">{{ photos.size }} {% if photos.size == 1 %}photo{% else %}photos{% endif %}</small></h2>
     {% if photos.size > 0 %}
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.25rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 1.25rem;">
         {% for photo in photos %}
           {% assign caption = photo.name | remove: photo.extname | replace: "-", " " | replace: "_", " " | capitalize %}
           <figure style="margin: 0; padding: 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 0.75rem;">

@@ -42,21 +42,21 @@ Search, dark mode, image zoom, reading progress, and back-to-top are controlled 
 
 ## Album: uploading photos through GitHub
 
-The album at `/album/` discovers photos from folders under `assets/album/`. The folder name is the category, and each photo's filename becomes its caption. There is no photo list or Markdown to update for individual uploads.
+The album at `/album/` discovers photos from folders under `assets/album/`. The folder name is the category, and each photo's filename becomes its caption. There is no photo list or Markdown to update for individual uploads. The homepage also shows a preview of three photos from the most recent categories. Empty categories are hidden, including `undated` when it has no photos.
 
 1. Open [the album folders on GitHub](https://github.com/PeterWANGHK/PeterWANGHK.github.io/tree/main/assets/album).
-2. Open the appropriate folder: `2022`, `2023`, `2024`, `2025`, `2026`, or `undated`.
+2. Open the appropriate year folder, such as `2022`, `2023`, or `2026`.
 3. Select **Add file → Upload files**, then drag your photos into the page.
 4. Enter a commit message, such as `Add 2026 conference photos`, and commit to **main**.
 5. Wait for **Build and deploy academic site** in the repository's **Actions** tab to finish. Refresh the album; the new images will appear automatically.
 
-Use JPG, JPEG, PNG, WebP, or GIF. Convert HEIC photos to JPEG before uploading. Use descriptive filenames such as `paris-arc-de-triomphe.jpg`; this displays as “Paris arc de triomphe.” Photos sort alphabetically by filename within each category, so prefixes such as `01-`, `02-` control their order. Names and extensions are case-sensitive in published URLs; lower-case filenames are simplest. Images retain their full frame, and visitors can click them to zoom.
+Use JPG, JPEG, PNG, WebP, GIF, HEIC, or HEIF. Both upper-case and lower-case extensions work. During deployment, HEIC/HEIF uploads are converted into browser-readable JPEG copies; the originals remain in GitHub. These generated copies are deployed but are not committed back to the repository. Use descriptive filenames such as `paris-arc-de-triomphe.jpg`; this displays as “Paris arc de triomphe.” Photos sort alphabetically by filename within each category, so prefixes such as `01-`, `02-` control their order. Images retain their full frame, and visitors can click them to zoom.
 
 Resize large photos to roughly 1600–2400 pixels on the long edge and aim for under 2 MB each for faster loading. GitHub's browser upload limit is 25 MiB per file; see [GitHub's upload instructions](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
-To add a new year or separate category, select **Add file → Create new file** in the repository and name it `assets/album/2027/.gitkeep` (or `assets/album/2026-travel/.gitkeep`). Commit it, then upload photos inside that new folder. Categories with photos appear automatically, with hyphens and underscores displayed as spaces. To show an empty category before uploading, add its folder name to `periods` in `_pages/album.md`. Keep photos inside a category folder, rather than directly under `assets/album/`.
+To add a new year or separate category, select **Add file → Create new file** in the repository and name it `assets/album/2027/.gitkeep` (or `assets/album/2026-travel/.gitkeep`). Commit it, then upload photos inside that new folder. Categories with photos appear automatically, with hyphens and underscores displayed as spaces. Keep photos inside a category folder, rather than directly under `assets/album/`.
 
-The supplied Paris profile photo starts in `undated` because its date was not provided. You can move it into the correct year later by editing its path on GitHub.
+Removing all photos from a category hides it on the site after the next deployment. If recent uploads do not appear, check **Actions** for a successful deployment and refresh the page with **Ctrl+F5**. The workflow checks that every supported album upload appears on the rendered album page, including HEIC/HEIF conversions.
 
 ## Appearance
 

@@ -48,6 +48,7 @@ class Links(HTMLParser):
         super().__init__()
         self.links = []
         self.ids = set()
+        self.image_sources = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -57,8 +58,29 @@ class Links(HTMLParser):
             self.links.append(attrs["href"])
         if "src" in attrs:
             self.links.append(attrs["src"])
+            if tag == "img":
+                self.image_sources.append(attrs["src"])
         if "srcset" in attrs:
             self.links.extend(item.strip().split()[0] for item in attrs["srcset"].split(",") if item.strip())
+
+
+album_parser = Links()
+album_parser.feed((root / "album/index.html").read_text(encoding="utf-8"))
+album_sources = []
+for photo in Path("assets/album").rglob("*"):
+    if photo.is_file() and photo.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp", ".gif", ".heic", ".heif"}:
+        public_photo = photo.with_suffix(".jpg") if photo.suffix.lower() in {".heic", ".heif"} else photo
+        url = baseurl + "/" + public_photo.as_posix()
+        assert url in album_parser.image_sources, f"Uploaded photo missing from album: {photo}"
+        album_sources.append(url)
+album_sources = set(album_sources)
+if not any("/assets/album/undated/" in source for source in album_sources):
+    assert "album-undated" not in album_parser.ids, "Empty Undated category is still displayed"
+home_parser = Links()
+home_parser.feed(home)
+preview_sources = [source for source in home_parser.image_sources if "/assets/album/" in source]
+assert len(preview_sources) == min(3, len(album_sources)), "Homepage album preview is incomplete"
+assert set(preview_sources) <= album_sources, "Homepage preview references photos outside the album"
 
 
 for artifact in root.rglob("*"):

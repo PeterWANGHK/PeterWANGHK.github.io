@@ -43,6 +43,8 @@ jobs:
         run: |
           bundle exec al-folio upgrade audit --no-fail
           bundle exec al-folio upgrade overrides audit
+      - name: Prepare HEIC album photos
+        run: python bin/prepare_album.py
       - name: Build root homepage and check routes
         env:
           JEKYLL_ENV: production

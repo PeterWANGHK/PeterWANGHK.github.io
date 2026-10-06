@@ -74,3 +74,31 @@ An overview of my research hierarchy for the recent year.
 
 {% assign awards_page = site.pages | where: 'permalink', '/awards/' | first %}
 {{ awards_page.content | markdownify }}
+
+## [Album]({{ '/album/' | relative_url }})
+
+Moments from different years, on campus and beyond. [Browse all photos]({{ '/album/' | relative_url }}).
+
+{% assign album_files = site.static_files | where_exp: "file", "file.path contains '/assets/album/'" | sort: "path" | reverse %}
+{% assign album_images = "" | split: "," %}
+{% assign image_extensions = ".jpg,.jpeg,.png,.webp,.gif" | split: "," %}
+{% for file in album_files %}
+{% assign extension = file.extname | downcase %}
+{% if image_extensions contains extension %}
+{% assign album_images = album_images | push: file %}
+{% endif %}
+{% endfor %}
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 1.25rem;">
+  {% for photo in album_images limit:3 %}
+    {% assign path_parts = photo.path | split: "/" %}
+    {% assign period = path_parts[3] | slugify %}
+    {% assign caption = photo.name | remove: photo.extname | replace: "-", " " | replace: "_", " " | capitalize %}
+    <figure style="margin: 0;">
+      <a href="{{ '/album/' | relative_url }}#album-{{ period }}">
+        <img src="{{ photo.path | relative_url }}" alt="{{ caption | escape }}" loading="lazy" decoding="async" style="display: block; width: 100%; height: 220px; object-fit: contain; border: 1px solid var(--global-divider-color); border-radius: 0.75rem;">
+      </a>
+      <figcaption class="caption">{{ path_parts[3] | replace: "-", " " | replace: "_", " " | capitalize | escape }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>
