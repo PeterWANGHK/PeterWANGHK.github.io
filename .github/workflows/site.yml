@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y imagemagick
+          sudo apt-get install -y imagemagick libheif-plugin-libde265
           npm ci
       - name: Check formatting and starter boundaries
         run: |
