@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Our paper, [**Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT**]({{ '/publications/' | relative_url }}#yu2026pipeline), has been accepted by **IEEE Transactions on Reliability**! Congratulations to my co-first author **Mingjian Yu**!
+🎉 Our paper, [**Generative-Enhanced Cascaded Diagnosis for Fine-Grained Pipeline Fault Severity Recognition with Hybrid LSNet–ViT**]({{ '/publications/' | relative_url }}#yu2026pipeline), has been accepted by **IEEE Transactions on Reliability**! Congratulations **Mingjian**!
