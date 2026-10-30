@@ -8,8 +8,8 @@ profile:
   image: profile.jpeg
   image_circular: false
   more_info: >
-    <p>103M, Haking Wong Building</p>
-    <p>The University of Hong Kong</p>
+    <p>42/F Hong Kong Plaza</p>
+    <p>188 Connaught Road West</p>
     <p>Hong Kong</p>
 selected_papers: false
 social: true
