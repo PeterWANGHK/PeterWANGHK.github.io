@@ -54,7 +54,7 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 
 {% include selected_papers.liquid %}
 
-### Research focus · 2026
+### Research focus
 
 Our research focuses on cross-embodiment skill transfer, connecting navigation, arm skills, and active perception through mobile manipulation, with shared human-centric safety and interaction objectives.
 
