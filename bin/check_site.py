@@ -23,7 +23,8 @@ for image in ["dream-methodology.jpg", "drift-methodology.png", "pipeline-graphi
 assert "Under second round of review" in publications
 assert "Co-first author" in publications
 assert "https://github.com/SAS-HKU/SAFE-AD" in publications
-assert "Under revision" in publications
+assert "Under revision" not in publications
+assert "Communications in Transportation Research" in publications
 assert "IEEE Transactions on Reliability" in publications
 assert len(re.findall(r'<a\b[^>]*class="bibtex\s', publications)) == 2, "Only public preprints should expose Bib buttons"
 assert "IF: 8.4" in publications and "IF: 12.7" in publications
@@ -37,7 +38,17 @@ assert home.count('class="title"') == 4, "Expected four selected publications"
 assert 'id="wang2026safead"' in home
 assert 'id="yu2026pipeline"' in home
 assert len(re.findall(r'<a\b[^>]*class="bibtex\s', home)) == 1, "Only DRIFT should expose a homepage Bib button"
-assert home.index('id="wang2026safead"') < home.index("Research hierarchy") < home.index("Honors and awards")
+assert home.index('id="wang2026safead"') < home.index("Research focus") < home.index("Honors and awards")
+assert "cross-embodiment-skill-transfer.jpg" in home
+assert "research_timeline.jpg" not in home
+for page in [home, publications]:
+    assert 'href="https://doi.org/10.1109/TR.2026.3743384"' in page
+    assert 'href="https://doi.org/10.26599/ETSD.2026.9190103"' in page
+    assert "Data DOI: 10.26599/ETSD.2026.9190103" in page
+news = (root / "news/index.html").read_text(encoding="utf-8")
+for page in [home, news]:
+    assert "Communications in Transportation Research (COMMTR)" in page
+    assert 'href="https://github.com/SAS-HKU/SAFE-AD"' in page
 for award in ["Talent Development Scholarship", "Dean's Honours List", "Best Presentation Award", "University Pitch Competition", "Best GBA Solution Award", "Reaching Out Award", "Undergraduate Research and Innovation Scholarship", "Microcontroller Application Design Contest", "Student Innovation and Entrepreneurship Scholarship"]:
     assert award in home, f"Missing homepage award: {award}"
 assert "Albert Einstein" not in (root / "cv/index.html").read_text(encoding="utf-8")

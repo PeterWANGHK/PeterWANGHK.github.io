@@ -1,4 +1,10 @@
-# Publication preview sources
+# Figure sources
+
+## Research focus
+
+- `cross-embodiment-skill-transfer.jpg`: original research focus pipeline (`HKUSAIL_Cross_Embodiment_Skill_Transfer.jpg`) supplied by Zian Wang (Peter) on 2026-10-30; copied unchanged. Replaces the research hierarchy figure on the homepage.
+
+## Publication previews
 
 Existing method figures are used as previews, rather than newly authored graphical abstracts.
 

@@ -54,11 +54,11 @@ Prior to joining HKU, I received the B.Eng. degree (with Honors) in Electronic a
 
 {% include selected_papers.liquid %}
 
-### Research hierarchy · 2026
+### Research focus · 2026
 
-An overview of my research hierarchy for the recent year.
+Our research focuses on cross-embodiment skill transfer, connecting navigation, arm skills, and active perception through mobile manipulation, with shared human-centric safety and interaction objectives.
 
-{% include figure.liquid path="assets/img/research_timeline.jpg" class="img-fluid rounded" alt="Research hierarchy for 2026" zoomable=true %}
+{% include figure.liquid path="assets/img/cross-embodiment-skill-transfer.jpg" class="img-fluid rounded" alt="Cross-embodiment skill transfer pipeline connecting human guidance, environment understanding, and risk assessment to navigation and arm skills across mobile robots and manipulators" zoomable=true %}
 
 ### HKU-SAIL Lab research demo · 2025–2026
 
