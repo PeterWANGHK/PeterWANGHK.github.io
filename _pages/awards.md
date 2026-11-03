@@ -5,6 +5,7 @@ permalink: /awards/
 description: Honors, scholarships, and awards.
 ---
 
+- URC Conference Award for RPG student 2026/2027
 - HKSAR Government Scholarship Fund – Talent Development Scholarship 2024/25
 - Dean's Honours List (2023-2024, 2024-2025), Faculty of Engineering, Hong Kong Polytechnic University
 - Best Presentation Award at the 2nd PolyU Research Student Conference (PRSC 2024)
