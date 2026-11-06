@@ -8,7 +8,7 @@ profile:
   image: profile.jpeg
   image_circular: false
   more_info: >
-    <p>42/F Hong Kong Plaza</p>
+    <p>42-14, Hong Kong Plaza</p>
     <p>188 Connaught Road West</p>
     <p>Hong Kong</p>
 selected_papers: false

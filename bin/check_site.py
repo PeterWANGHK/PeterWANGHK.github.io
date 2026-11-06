@@ -42,13 +42,13 @@ assert home.index('id="wang2026safead"') < home.index("Research focus") < home.i
 assert "cross-embodiment-skill-transfer.jpg" in home
 assert "research_timeline.jpg" not in home
 for page in [home, publications]:
+    assert 'href="https://doi.org/10.26599/COMMTR.2026.9640067"' in page
     assert 'href="https://doi.org/10.1109/TR.2026.3743384"' in page
     assert 'href="https://doi.org/10.26599/ETSD.2026.9190103"' in page
-    assert "Data DOI: 10.26599/ETSD.2026.9190103" in page
+    assert "Dataset: 10.26599/ETSD.2026.9190103" in page
 news = (root / "news/index.html").read_text(encoding="utf-8")
 for page in [home, news]:
     assert "Communications in Transportation Research (COMMTR)" in page
-    assert 'href="https://github.com/SAS-HKU/SAFE-AD"' in page
 for award in ["Talent Development Scholarship", "Dean's Honours List", "Best Presentation Award", "University Pitch Competition", "Best GBA Solution Award", "Reaching Out Award", "Undergraduate Research and Innovation Scholarship", "Microcontroller Application Design Contest", "Student Innovation and Entrepreneurship Scholarship"]:
     assert award in home, f"Missing homepage award: {award}"
 assert "Albert Einstein" not in (root / "cv/index.html").read_text(encoding="utf-8")

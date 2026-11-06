@@ -7,7 +7,7 @@ description: Contact and academic profiles.
 
 The best way to reach me is by [email](mailto:peterwang.dase@connect.hku.hk).
 
-**Office**: 103M, Haking Wong Building, The University of Hong Kong, Hong Kong.
+**Office**: 42-14, Hong Kong Plaza, 188 Connaught Road West, Hong Kong.
 
 - [Google Scholar](https://scholar.google.com/citations?user=zkTzcFQAAAAJ&hl=en)
 - [GitHub](https://github.com/PeterWANGHK)
